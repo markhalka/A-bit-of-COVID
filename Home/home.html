@@ -23,8 +23,8 @@
 <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
 
     <style>
-	
-	
+  
+  
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -40,16 +40,16 @@
         }
       }
     </style>
-	<!-- this is the home style 
-	
-	body{
+  <!-- this is the home style 
+  
+  body{
             margin:0;
             overflow: hidden;
             font-size:0;
         }
-		
-		
-		p{
+    
+    
+    p{
   position: fixed;
   left: 0;
   bottom:5px;
@@ -62,30 +62,27 @@
   text-align: center;
   margin: 0;
 }
-
-
  canvas{
             background: black;
             width: 100vw;
             height: 100vh;
-			position: absolute;
-			   padding:0;
+      position: absolute;
+         padding:0;
     margin:0;
-	  position:fixed;
+    position:fixed;
     left:0;
     top:0;
-	z-index: 0;
-
+  z-index: 0;
         }
-		not used ^
-	-->
+    not used ^
+  -->
 
-	
-	
+  
+  
     <!-- Custom styles for this template -->
     <link href="menu.css" rel="stylesheet">
-	<link href="home.css" rel="stylesheet">
-	
+  <link href="home.css" rel="stylesheet">
+  
   </head>
   <body class="text-center">
   
@@ -98,63 +95,54 @@
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link active" href="home.html">Home</a>
         <a class="nav-link" href="aboutUs.html">About us</a>
-		<a class="nav-link" href="research.html">Research</a>
-		
+    <a class="nav-link" href="research.html">Research</a>
+    
       </nav>
     </div>
   </header>
   
- 	   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">  
+     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">  
+        <!--<div id="particle-container" class="cover-container d-flex w-100 h-500 p-3 mx-auto flex-column">
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+        </div> -->
    <canvas id="scene" ></canvas>
     <input id="copy" value="A-bit of Covid" type="hidden" />
-</div>
-	
-
-  
-  
-<div id="particle-container" class="cover-container d-flex w-100 h-500 p-3 mx-auto flex-column">
-	<img class="particle" src="logob.png"></img>
-	<img class="particle" src="logoy.png"></img>
-	<img class="particle" src="logor.png"></img>
-	<img class="particle" src="logob.png"></img>
-	<img class="particle" src="logoy.png"></img>
-	<img class="particle" src="logor.png"></img>
-	<img class="particle" src="logob.png"></img>
-	<img class="particle" src="logoy.png"></img>
-	<img class="particle" src="logor.png"></img>
-	<img class="particle" src="logob.png"></img>
-	<img class="particle" src="logoy.png"></img>
-	<img class="particle" src="logor.png"></img>
-	<img class="particle" src="logob.png"></img>
-	<img class="particle" src="logoy.png"></img>
-	<img class="particle" src="logor.png"></img>
-	<img class="particle" src="logob.png"></img>
-	<img class="particle" src="logoy.png"></img>
-	<img class="particle" src="logor.png"></img>
-	<img class="particle" src="logob.png"></img>
-	<img class="particle" src="logoy.png"></img>
-	<img class="particle" src="logor.png"></img>
-	<img class="particle" src="logob.png"></img>
-	<img class="particle" src="logoy.png"></img>
-	<img class="particle" src="logor.png"></img>
-	<img class="particle" src="logob.png"></img>
-	<img class="particle" src="logoy.png"></img>
-	<img class="particle" src="logor.png"></img>
-	<img class="particle" src="logob.png"></img>
-	<img class="particle" src="logoy.png"></img>
-	<img class="particle" src="logor.png"></img>
-	
-	
-	
 
 </div>
-
-
 </div>
 
  <!-- this is for the header particles -->
 
-	
+  
 <script>
 
  var canvas = document.querySelector("#scene"),
@@ -163,19 +151,13 @@
         amount = 0,
         mouse = {x:0,y:0},
         radius = 1;
-
-    var colors = ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
-	var virus1 = new Image();
-	var virus2 = new Image();
-	var virus3 = new Image();
-		virus1.src = "logob.png";
-		virus2.src = "logoy.png";
-		virus3.src = "logor.png";
-		
-		
-
-
-
+  var virus1 = new Image();
+  var virus2 = new Image();
+  var virus3 = new Image();
+    virus1.src = "logob.png";
+    virus2.src = "logoy.png";
+    virus3.src = "logor.png";
+    
     var copy = document.querySelector("#copy");
 
     var ww = canvas.width = window.innerWidth;
@@ -188,27 +170,22 @@
             x : x,
             y: y
         };
-        this.r =  Math.random()*10 + 10;
+        this.r =  Math.floor(Math.random()*10 + 7);
         this.vx = (Math.random()-0.5)*20;
         this.vy = (Math.random()-0.5)*20;
         this.accX = 0;
         this.accY = 0;
-		var index = Math.floor(Math.random()*3);
-		this.image = virus1;
-
-		if(index == 1){
-		this.image = virus2
-		} else if(index == 2){
-		this.image = virus3
-		}
+    var index = Math.floor(Math.random()*3);
+    this.image = virus1;
+    if(index == 1){
+      this.image = virus2
+    } else if(index == 2){
+      this.image = virus3
+    }
         this.friction = Math.random()*0.05 + 0.94;
-
-        this.color = colors[Math.floor(Math.random()*6)];
     }
 
     Particle.prototype.render = function() {
-
-
         this.accX = (this.dest.x - this.x)/1000;
         this.accY = (this.dest.y - this.y)/1000;
         this.vx += this.accX;
@@ -217,13 +194,8 @@
         this.vy *= this.friction;
 
         this.x += this.vx;
-        this.y +=  this.vy;
-
-        //ctx.fillStyle = this.color;
-       // ctx.beginPath();
-       // ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
-      //  ctx.fill();
-		  ctx.drawImage(this.image, this.x, this.y, this.r, this.r);
+        this.y += this.vy;
+      ctx.drawImage(this.image, this.x, this.y, this.r, this.r);
         var a = this.x - mouse.x;
         var b = this.y - mouse.y;
 
@@ -234,7 +206,6 @@
             this.vx += this.accX;
             this.vy += this.accY;
         }
-
     }
 
     function onMouseMove(e){
@@ -260,17 +231,18 @@ function onTouchEnd(e){
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        ctx.font = "bold "+(ww/20)+"px sans-serif";
+        ctx.font = (ww/14)+"px rainyhearts";
         ctx.textAlign = "center";
-        ctx.fillText(copy.value, ww/4, wh/2);
+        ctx.fillText(copy.value, 0.2*ww, 0.5*wh);
 
         var data  = ctx.getImageData(0, 0, ww, wh).data;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.globalCompositeOperation = "screen";
 
+        //location of particles
         particles = [];
         for(var i=0;i<ww;i+=Math.round(ww/250)){
-            for(var j=0;j<wh;j+=Math.round(ww/150)){
+            for(var j=0;j<wh;j+=Math.round(ww/250)){
                 if(data[ ((i + j*ww)*4) + 3] > 150){
                     particles.push(new Particle(i,j));
                 }
@@ -305,7 +277,7 @@ function onTouchEnd(e){
     requestAnimationFrame(render);
 
 </script>
-	
+  
 
 
 </body>

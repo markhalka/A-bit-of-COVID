@@ -1,3 +1,5 @@
+*{overflow: hidden;}
+
 @keyframes particle-animation-1 {
   100% {
     transform: translate3d(51vw, 53vh, 75px);
