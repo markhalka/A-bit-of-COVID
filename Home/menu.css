@@ -1,10 +1,14 @@
 @font-face {
-  font-family: slkscr;
-  src: url(slkscr.ttf);
+    font-family: silkscreennormal;
+    src: url('slkscr-webfont.woff2') format('woff2'),
+         url('slkscr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 .inner{
-  font-family: slkscr;
+  font-family: silkscreennormal;
   font-size: 20px;
 }
 
