@@ -1,5 +1,21 @@
-	.container {
+.container {
   max-width: 960px;
+}
+
+@font-face {
+    font-family: lato;
+    src: url('lato-regular-webfont.woff2') format('woff2'),
+         url('lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: silkscreennormal;
+    src: url('slkscr-webfont.woff2') format('woff2'),
+         url('slkscr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /*

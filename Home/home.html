@@ -21,27 +21,6 @@
 
     <!-- Bootstrap core CSS -->
 <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
-
-    <style>
-  
-  
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-  
-
     <!-- Custom styles for this template -->
     <link href="menu.css" rel="stylesheet">
   <link href="home.css" rel="stylesheet">
@@ -103,7 +82,7 @@
         </div> 
           
    
-    <input id="copy" value="A-bit of Covid" type="hidden" />
+    <input id="copy" value="A-BIT OF COVID" type="hidden" />
 
 </div>
 
@@ -138,7 +117,7 @@
             x : x,
             y: y
         };
-        this.r =  Math.floor(Math.random()*10 + 5);
+        this.r =  Math.random()*5 + wh*0.01;
         this.vx = (Math.random()-0.5)*20;
         this.vy = (Math.random()-0.5)*20;
         this.accX = 0;
@@ -188,20 +167,26 @@
     }
     }
 
-function onTouchEnd(e){
-  mouse.x = -9999;
-  mouse.y = -9999;
-}
+    function onTouchEnd(e){
+      mouse.x = -9999;
+      mouse.y = -9999;
+    }
 
     function initScene(){
         ww = canvas.width = window.innerWidth;
         wh = canvas.height = window.innerHeight;
-
+        ctx.font = (ww/20)+"px lato";
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        ctx.font = (ww/10)+"px silkscreennormal";
-        ctx.textAlign = "left";
-        ctx.fillText(copy.value, 0, 0.5*wh);
+        
+        if (ww > 750){
+          ctx.textAlign = "left";
+          ctx.fillText(copy.value, 0.02*ww, 0.4*wh);
+        }
+        else{
+          ctx.textAlign = "center";
+          ctx.fillText(copy.value, 0.5*ww, 0.4*wh);
+        }
+        
 
         var data  = ctx.getImageData(0, 0, ww, wh).data;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -209,8 +194,8 @@ function onTouchEnd(e){
 
         //location of particles
         particles = [];
-        for(var i=0;i<ww;i+=Math.round(ww/250)){
-            for(var j=0;j<wh;j+=Math.round(ww/250)){
+        for(var i=0;i<ww;i+=Math.round(ww/300)){
+            for(var j=0;j<wh;j+=Math.round(ww/300)){
                 if(data[ ((i + j*ww)*4) + 3] > 150){
                     particles.push(new Particle(i,j));
                 }
@@ -222,7 +207,7 @@ function onTouchEnd(e){
 
     function onMouseClick(){
         radius++;
-        if(radius ===5){
+        if(radius === 3){
             radius = 0;
         }
     }
@@ -236,6 +221,7 @@ function onTouchEnd(e){
     };
 
     copy.addEventListener("keyup", initScene);
+    window.addEventListener("load", initScene);
     window.addEventListener("resize", initScene);
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("touchmove", onTouchMove);

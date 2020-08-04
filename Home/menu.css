@@ -23,17 +23,6 @@ a:hover {
   color: #fff;
 }
 
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
-
-
 /*
  * Base structure
  */
@@ -53,13 +42,6 @@ body {
   max-width: 42em;
 }
 */
-
-/*
- * Header
- */
-.masthead {
-  margin-bottom: 2rem;
-}
 
 .masthead-brand {
   margin-bottom: 0;
@@ -93,25 +75,4 @@ body {
   .nav-masthead {
     float: right;
   }
-}
-
-
-/*
- * Cover
- */
- 
-.cover {
-  padding: 0 1.5rem;
-}
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: 700;
-}
-
-
-/*
- * Footer
- */
-.mastfoot {
-  color: rgba(255, 255, 255, .5);
 }

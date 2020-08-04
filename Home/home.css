@@ -7,7 +7,14 @@
          url('slkscr-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: lato;
+    src: url('lato-regular-webfont.woff2') format('woff2'),
+         url('lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .masthead{
@@ -28,6 +35,7 @@
   top: 50vh;
   color: white;
   font-family: silkscreennormal;
+  padding-right: ;
 }
 
 
