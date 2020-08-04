@@ -199,9 +199,9 @@ function onTouchEnd(e){
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        ctx.font = (wh/10)+"px silkscreennormal";
+        ctx.font = (wh/4)+"px silkscreennormal";
         ctx.textAlign = "left";
-        ctx.fillText(copy.value, 0.1*ww, 0.5*wh);
+        ctx.fillText(copy.value, 0, 0.5*wh);
 
         var data  = ctx.getImageData(0, 0, ww, wh).data;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
