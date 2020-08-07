@@ -21,6 +21,108 @@
 
     <!-- Bootstrap core CSS -->
 <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+
+    <style>
+  
+  
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+	  
+	  #scene{
+
+
+	  position: absolute;
+
+	  }
+	  
+.button {
+width : 30%;
+height: 8%;
+bottom: 20%;
+right: 10%;
+  border: none;
+  color: white;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+.button2 {
+bottom: 40%;
+background-color: #008CBA;
+  
+
+} /* Blue */
+.button3 {
+bottom: 50%;
+background-color: #f44336;
+  } 
+/* Red */ 
+.button4 {
+bottom: 60%;
+background-color: #e7e7e7; color: black;
+} 
+
+
+
+
+
+    </style>
+  <!-- this is the home style 
+  
+  body{
+            margin:0;
+            overflow: hidden;
+            font-size:0;
+        }
+    
+    
+    p{
+  position: fixed;
+  left: 0;
+  bottom:5px;
+  color: #fff;
+  z-index:10;
+  font-size:16px;
+  font-family: Helvetica, Verdana, sans-serif;
+  opacity:0.5;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+ canvas{
+            background: black;
+            width: 100vw;
+            height: 100vh;
+      position: absolute;
+         padding:0;
+    margin:0;
+    position:fixed;
+    left:0;
+    top:0;
+  z-index: 0;
+        }
+    not used ^
+  -->
+
+  
+  
     <!-- Custom styles for this template -->
     <link href="menu.css" rel="stylesheet">
   <link href="home.css" rel="stylesheet">
@@ -35,56 +137,60 @@
     <div class="inner">
       <img class="masthead-brand" src="logo.png" width=40wh></img>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="home.html">HOME</a>
-        <a class="nav-link" href="aboutUs.html">ABOUT US</a>
-    <a class="nav-link" href="research.html">RESEARCH</a>
+        <a class="nav-link active" href="home.html">Home</a>
+        <a class="nav-link" href="aboutUs.html">About us</a>
+    <a class="nav-link" href="research.html">Research</a>
     
       </nav>
     </div>
   </header>
-  
-     <div id="particles" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">  
-           <div id="subtitle">
-           Learn about COVID-19 one bit at a time with the help of our simulations =)
-         </div>
-            <canvas id="scene"></canvas>
-         <div id="particle-container" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-        </div> 
-          
-   
-    <input id="copy" value="A-BIT OF COVID" type="hidden" />
+
+  <canvas id="scene"  >
+
+  </canvas> 
+
+				     <input id="copy" value="A-bit of Covid" type="hidden" />
+          <div><!--class="align-self-center ml-auto"> -->
+	<button class="button button2" onclick="window.location.href='SpatialBuild/index.html';">Social Distancing Simulation</button>
+<button class="button button3" onclick="window.location.href='maskBuild/index.html';">Mask Simulation</button>
+<button class="button button4" onclick="window.location.href='MaterialsBuild/index.html';">Materials Simulation</button>
 
 </div>
+       <div id="particle-container" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+            <img class="particle" src="logob.png"></img>
+            <img class="particle" src="logoy.png"></img>
+            <img class="particle" src="logor.png"></img>
+
+        </div>
+</div>
+ 
 
 
  <!-- this is for the header particles -->
@@ -117,7 +223,7 @@
             x : x,
             y: y
         };
-        this.r =  Math.random()*5 + wh*0.01;
+        this.r =  Math.floor(Math.random()*10 + 7);
         this.vx = (Math.random()-0.5)*20;
         this.vy = (Math.random()-0.5)*20;
         this.accX = 0;
@@ -167,26 +273,20 @@
     }
     }
 
-    function onTouchEnd(e){
-      mouse.x = -9999;
-      mouse.y = -9999;
-    }
+function onTouchEnd(e){
+  mouse.x = -9999;
+  mouse.y = -9999;
+}
 
     function initScene(){
         ww = canvas.width = window.innerWidth;
         wh = canvas.height = window.innerHeight;
-        ctx.font = (ww/20)+"px lato";
+
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        if (ww > 750){
-          ctx.textAlign = "left";
-          ctx.fillText(copy.value, 0.02*ww, 0.4*wh);
-        }
-        else{
-          ctx.textAlign = "center";
-          ctx.fillText(copy.value, 0.5*ww, 0.4*wh);
-        }
-        
+
+        ctx.font = (ww/14)+"px rainyhearts";
+        ctx.textAlign = "center";
+        ctx.fillText(copy.value, 0.2*ww, 0.5*wh);
 
         var data  = ctx.getImageData(0, 0, ww, wh).data;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -194,8 +294,8 @@
 
         //location of particles
         particles = [];
-        for(var i=0;i<ww;i+=Math.round(ww/300)){
-            for(var j=0;j<wh;j+=Math.round(ww/300)){
+        for(var i=0;i<ww;i+=Math.round(ww/250)){
+            for(var j=0;j<wh;j+=Math.round(ww/250)){
                 if(data[ ((i + j*ww)*4) + 3] > 150){
                     particles.push(new Particle(i,j));
                 }
@@ -207,7 +307,7 @@
 
     function onMouseClick(){
         radius++;
-        if(radius === 3){
+        if(radius ===5){
             radius = 0;
         }
     }
@@ -221,7 +321,6 @@
     };
 
     copy.addEventListener("keyup", initScene);
-    window.addEventListener("load", initScene);
     window.addEventListener("resize", initScene);
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("touchmove", onTouchMove);
