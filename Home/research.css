@@ -1,4 +1,21 @@
 /* stylelint-disable selector-list-comma-newline-after */
+@font-face {
+    font-family: silkscreennormal;
+    src: url('slkscr-webfont.woff2') format('woff2'),
+         url('slkscr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: lato;
+    src: url('lato-regular-webfont.woff2') format('woff2'),
+         url('lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{font-family: "lato";}
 
 p{
 color: white;
@@ -29,33 +46,10 @@ ol {
 }
 
 
-
-.blog-header {
-  line-height: 1;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 2.25rem;
-}
-
-.blog-header-logo:hover {
-  text-decoration: none;
-}
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-family: "silkscreennormal";
 }
 
-.display-4 {
-  font-size: 2.5rem;
-}
-@media (min-width: 768px) {
-  .display-4 {
-    font-size: 3rem;
-  }
-}
 
 .nav-scroller {
   position: relative;

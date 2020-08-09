@@ -17,7 +17,7 @@
     <meta name="author" content="A bunch of people">
     <meta name="generator" content="Jekyll v4.0.1">
     <title>A-bit of Covid</title>
-
+    <link rel="icon" href="logo.png">
 
     <!-- Bootstrap core CSS -->
 <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
@@ -84,44 +84,6 @@ background-color: #e7e7e7; color: black;
 
 
     </style>
-  <!-- this is the home style 
-  
-  body{
-            margin:0;
-            overflow: hidden;
-            font-size:0;
-        }
-    
-    
-    p{
-  position: fixed;
-  left: 0;
-  bottom:5px;
-  color: #fff;
-  z-index:10;
-  font-size:16px;
-  font-family: Helvetica, Verdana, sans-serif;
-  opacity:0.5;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-}
- canvas{
-            background: black;
-            width: 100vw;
-            height: 100vh;
-      position: absolute;
-         padding:0;
-    margin:0;
-    position:fixed;
-    left:0;
-    top:0;
-  z-index: 0;
-        }
-    not used ^
-  -->
-
-  
   
     <!-- Custom styles for this template -->
     <link href="menu.css" rel="stylesheet">
@@ -149,8 +111,10 @@ background-color: #e7e7e7; color: black;
 
   </canvas> 
 
-				     <input id="copy" value="A-bit of Covid" type="hidden" />
-          
+				     <input id="copy" value="A-BIT OF COVID" type="hidden" />
+          <div id="subtitle">
+           Learn about COVID-19 one bit at a time with the help of our simulations =)
+         </div>
        <div id="particle-container" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <img class="particle" src="logob.png"></img>
             <img class="particle" src="logoy.png"></img>
@@ -197,6 +161,8 @@ background-color: #e7e7e7; color: black;
  <!-- this is for the header particles -->
 
   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
 <script>
 
  var canvas = document.querySelector("#scene"),
@@ -214,8 +180,8 @@ background-color: #e7e7e7; color: black;
     
     var copy = document.querySelector("#copy");
 
-    var ww = canvas.width = window.innerWidth;
-    var wh = canvas.height = window.innerHeight;
+    var ww = canvas.width = $( window ).width();
+    var wh = canvas.height = $( window ).height();
 
     function Particle(x,y){
         this.x =  Math.random()*ww;
@@ -224,7 +190,7 @@ background-color: #e7e7e7; color: black;
             x : x,
             y: y
         };
-        this.r =  Math.floor(Math.random()*10 + 7);
+        this.r =  Math.random()*5 + wh*0.01;
         this.vx = (Math.random()-0.5)*20;
         this.vy = (Math.random()-0.5)*20;
         this.accX = 0;
@@ -274,20 +240,26 @@ background-color: #e7e7e7; color: black;
     }
     }
 
-function onTouchEnd(e){
-  mouse.x = -9999;
-  mouse.y = -9999;
-}
+    function onTouchEnd(e){
+      mouse.x = -9999;
+      mouse.y = -9999;
+    }
 
     function initScene(){
-        ww = canvas.width = window.innerWidth;
-        wh = canvas.height = window.innerHeight;
-
+        ww = canvas.width = $( window ).width();
+        wh = canvas.height = $( window ).height();
+        ctx.font = (ww/20)+"px lato";
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        ctx.font = (ww/14)+"px rainyhearts";
-        ctx.textAlign = "center";
-        ctx.fillText(copy.value, 0.2*ww, 0.5*wh);
+        
+        if (ww > 750){
+          ctx.textAlign = "left";
+          ctx.fillText(copy.value, 0.02*ww, 0.4*wh);
+        }
+        else{
+          ctx.textAlign = "center";
+          ctx.fillText(copy.value, 0.5*ww, 0.4*wh);
+        }
+        
 
         var data  = ctx.getImageData(0, 0, ww, wh).data;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -295,8 +267,8 @@ function onTouchEnd(e){
 
         //location of particles
         particles = [];
-        for(var i=0;i<ww;i+=Math.round(ww/250)){
-            for(var j=0;j<wh;j+=Math.round(ww/250)){
+        for(var i=0;i<ww;i+=Math.round(ww/300)){
+            for(var j=0;j<wh;j+=Math.round(ww/300)){
                 if(data[ ((i + j*ww)*4) + 3] > 150){
                     particles.push(new Particle(i,j));
                 }
@@ -308,7 +280,7 @@ function onTouchEnd(e){
 
     function onMouseClick(){
         radius++;
-        if(radius ===5){
+        if(radius === 3){
             radius = 0;
         }
     }
@@ -322,6 +294,7 @@ function onTouchEnd(e){
     };
 
     copy.addEventListener("keyup", initScene);
+    window.addEventListener("load", initScene);
     window.addEventListener("resize", initScene);
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("touchmove", onTouchMove);
