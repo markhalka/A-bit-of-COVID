@@ -18,16 +18,32 @@
 
 .masthead{
   position: relative;
-  z-index: 11;
+  z-index: 12;
 }
 
 .text{
-  position: absolute;
   z-index: 10;
-  text-align: left;
-  top: 50vh;
+  position: relative;
+  text-align: center;
   color: #F0F7F4;
+  font-size: 2.5vh;
+  font-family: lato;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2vh;
+}
+
+.title{
+  z-index: 10;
+  position: absolute;;
+  color: #F0F7F4;
+  font-size: 4vh;
   font-family: silkscreennormal;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 5vh;
 }
 
 .butt1{
@@ -88,6 +104,7 @@
 }
 
 .overlay {
+  z-index: 11;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -97,7 +114,6 @@
   height: 20vh;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
 }
 
 .butt1:hover .overlay{
