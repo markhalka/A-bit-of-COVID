@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="yes, description">
@@ -10,8 +11,9 @@
     <link rel="icon" href="logo.png">
 
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
- <link href="menu.css" rel="stylesheet"> <!-- you need to find the right style sheet here ->
+    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="menu.css" rel="stylesheet">
+    <!-- you need to find the right style sheet here ->
 
 
     <style>
@@ -34,353 +36,484 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="research.css" rel="stylesheet">
-	
-	
-  </head>
-  <body>
+    <!-- MathJAXCDN -->
+
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+MathJax.Hub.Config({
+ tex2jax: {
+  inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+  processEscapes: true
+}});</script> -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+        TeX: {
+            extensions: ["begingroup.js"],
+            noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+            Macros: { href: "{}" } 
+        },
+        messageStyle: "none",
+        styles: { ".MathJax_Display, .MathJax_Preview, .MathJax_Preview > *": { "background": "inherit" } },
+        SEEditor: "mathjaxEditing"
+});
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+
+<body>
     <div class="container-fluid">
 
-   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <img class="masthead-brand" src="logo.png" width=40wh></img>
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link" href="home.html">Home</a>
-        <a class="nav-link" href="aboutUs.html">About us</a>
-		<a class="nav-link active" href="research.html">Research</a>
-      </nav>
-    </div>
-  </header>
-  </div>
-
- 
-
-<main role="main" class="container">
-  <div class="row">
-    <div class="col-md-8 blog-main">
-      <h3 class="pb-4 mb-4 font-italic border-bottom">
-        Simulation Research Summaries, and Sources
-      </h3>
-
-      <div class="blog-post">
-        <h2 class="blog-post-title">Particle Simulation Research</h2>
- <body class="c10">
-
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c7">
-            <span class="c1">
-                To begin, a brief summary of Unity&rsquo;s physics engine will help with the understanding of the calculations to be made. Unity does not include specific units for measuring its variables like velocity or acceleration. It
-                also does not take into account mass into any of its physics explicitly, and thus, it&rsquo;s value for gravity is based on its preset
-            </span>
-            <img src="images/image1.png" /><span class="c1">. This means that any object in unity with a value of 1 for its gravity modifier will fall at </span><img src="images/image1.png" />
-            <span class="c0">, regardless of its size. For this reason, the gravity modifier was taken into account using a different method to accommodate for the lack of consideration for mass. </span>
-        </p>
-        <p class="c3"><span class="c0"></span></p>
-        <p class="c4 c7"><span class="c0">The primary values that were integral to deriving the values of the other forces were the speed of the particles, their mass, and the duration of the processes:</span></p>
-        <p class="c3"><span class="c0"></span></p>
-        <p class="c2"><img src="images/image2.png" /></p>
-        <p class="c3"><span class="c0"></span></p>
-        <p class="c4 c7">
-            <span class="c1">The literature values of their peak speeds are</span><img src="images/image3.png" /><span class="c1">or </span><img src="images/image4.png" /><span class="c1">&nbsp;for a sneeze, and </span>
-            <img src="images/image5.png" /><span class="c1">&nbsp;or </span><img src="images/image6.png" /><span class="c1">for a cough. (Olsberg) The literature values of the average sizes of both sneeze and cough particles are </span>
-            <img src="images/image7.png" /><span class="c1">&nbsp;and </span><img src="images/image8.png" />
-            <span class="c1">&nbsp;respectively. (Han &amp; Xie, 2013a, 2009b) By dividing the total mass of fluids from 20 cough trials by the trial number; </span><img src="images/image9.png" />
-            <span class="c1">, and the total average number of cough particles in a single cough; 3000, the average mass of a single cough particle was found: </span><img src="images/image10.png" />
-            <span class="c1">. (Xie &amp; Bardi, 2009a, 2009b) By using the ratios of mass to particle size, the average mass of a single sneeze particle can be found: </span><img src="images/image11.png" /><span class="c1">&nbsp;</span>
-            <img src="images/image12.png" />
-            <span class="c0">. From the same study done on sneezes, the average duration of both a sneeze and a cough can be found: 0.5s. (Han) With these variables, the average force of both a sneeze and a cough can be found. </span>
-        </p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c2"><img src="images/image13.png" /></p>
-        <p class="c2"><img src="images/image14.png" /></p>
-        <p class="c4"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-        <p class="c4"><span class="c0">Using the same mass values, we can determine the force of gravity on each individual particle: </span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c2"><img src="images/image15.png" /></p>
-        <p class="c2"><img src="images/image16.png" /></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4"><span class="c0">In determining the ratio between the force of gravity and force of each respective processes, the value for the gravity modifier can be found:</span></p>
-        <p class="c2"><img src="images/image17.png" /></p>
-        <p class="c2"><img src="images/image18.png" /></p>
-        <p class="c4">
-            <span class="c1">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another force that affects moving particles is drag, though it will be omitted in this instance as its calculated force for both the sneeze and the cough were on an order of
-            </span>
-            <img src="images/image19.png" /><span class="c0">times smaller than the force of gravity and the sneeze. </span>
-        </p>
-        <p class="c4">
-            <span class="c0">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another thing that needed to be taken into account was the obvious damping of the particle speed as the particles traveled with time. This value was determined by adjusting the
-                value based on the distance traveled by the particles in relation to the actual distance traveled by both the sneeze and the cough in literature values; up to 27 feet; &gt; 8meters for a sneeze and up to 6 meters for a
-                cough. This yielded unity damping values of 0.05 and 0.04 for the sneeze and cough respectively.
-            </span>
-        </p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4">
-            <span class="c1">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some details that were enabled were the collision, noise, shape, colour, and size modules, and the start speed. With the collision module, we set the number of particle
-                collisions to take place to be the same as the number of particles with both the cough and the sneeze. Due to the limitations of rendering and its toll on a digital device, reducing the number of sneeze particles from the
-                literature value of
-            </span>
-            <img src="images/image20.png" />
-            <span class="c0">
-                particles to 4000 was necessary. (Olsberg) For this reason, we reduced the number of cough particles to 120 to maintain the ratio of 100000 : 3000 particles between a sneeze and a cough to maintain some semblance of the
-                ratio. Collision meshes were given to the masks and the character models to allow for proper particle collisions. The noise module was activated to allow for realism in the particle movement to resemble the nature of moving
-                particles in the real world. A damping effect on the noise module was used to mimic the loss of spontaneity in the particles as they continue in their motion. The shape module was activated to allow for the relative cone
-                shape of a sneeze, originating at a base approximately the size of the character model&rsquo;s mouth. The size of the particles was enlarged and given a green colour for visual enhancement purposes. The start speed was set
-                to originate from a curve to mimic the variance in output speeds of the particles, with the max speed set to the peak speeds of each respective process.
-            </span>
-        </p>
-        <p class="c4"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-        <p class="c4">
-            <span class="c0">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That concludes the further info section. I hope you gained more insight as to how we created this simulation and the effectiveness of using a mask in the prevention of virus or
-                bacteria spread.
-            </span>
-        </p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c2"><span class="c0">Bibliography</span></p>
-        <p class="c6">
-            <span class="c1">Bardi, Jason Socrates. &ldquo;The Gross Science of a Cough and a Sneeze.&rdquo; </span><span class="c1 c8">LiveScience</span>
-            <span class="c0">, Purch, 14 June 2009, www.livescience.com/3686-gross-science-cough-sneeze.html.</span>
-        </p>
-        <p class="c6">
-            <span class="c1">Han, Z. Y., et al. &ldquo;Characterizations of Particle Size Distribution of the Droplets Exhaled by Sneeze.&rdquo; </span><span class="c1 c8">Journal of The Royal Society Interface</span>
-            <span class="c0">, vol. 10, no. 88, 6 Nov. 2013, p. 20130560., doi:10.1098/rsif.2013.0560.</span>
-        </p>
-        <p class="c6">
-            <span class="c1">Matthews, Robert. &ldquo;How Far Do Coughs and Sneezes Travel?&rdquo; </span><span class="c1 c8">BBC Science Focus Magazine</span>
-            <span class="c0">, Science Focus , 16 June 2019, www.sciencefocus.com/the-human-body/how-far-do-coughs-and-sneezes-travel/.</span>
-        </p>
-        <p class="c6">
-            <span class="c1">Olsberg, MacKenzie Health &amp; Wellness Lung Health and Diseases Science. </span><span class="c1 c8">How Fast Is a Sneeze Versus a Cough? Cover Your Mouth Either Way!</span>
-            <span class="c0">&nbsp;9 Apr. 2020, www.lung.org/blog/sneeze-versus-cough.</span>
-        </p>
-        <p class="c6">
-            <span class="c1">Xie, Xiaojian, et al. &ldquo;Exhaled Droplets Due to Talking and Coughing.&rdquo; </span><span class="c1 c8">Journal of The Royal Society Interface</span>
-            <span class="c0">, vol. 6, no. suppl_6, 7 Oct. 2009, doi:10.1098/rsif.2009.0388.focus.</span>
-        </p>
-        <p class="c4 c5"><span class="c0"></span></p>
-        <p class="c4 c5"><span class="c9"></span></p>
-    </body>
-      </div><!-- /.blog-post -->
-
-      <div class="blog-post">
-        <h2 class="blog-post-title">COVID Spread research</h2>
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <img class="masthead-brand" src="logo.png" width=40wh></img>
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link" href="aboutUs.html">About us</a>
+                        <a class="nav-link active" href="research.html">Research</a>
+                    </nav>
+                </div>
+            </header>
+        </div>
 
 
-       <p class="c1">
-            <span class="c29">Chances of transmitting </span><span class="c29">COVID </span><sup><a href="#cmnt3" id="cmnt_ref3">[c]</a></sup><sup><a href="#cmnt4" id="cmnt_ref4">[d]</a></sup>
-            <sup><a href="#cmnt5" id="cmnt_ref5">[e]</a></sup><span class="c8">with different scenarios</span>
-        </p>
-        <p class="c1">
-            <span class="c16 c13">
-                <a class="c14" href="https://www.google.com/url?q=https://www.cnn.com/2020/06/01/health/review-masks-social-distancing-covid-19-wellness/index.html&amp;sa=D&amp;ust=1596340928273000&amp;usg=AOvVaw1gEUChiRoxlXVtzz29q3Ye">
-                    https://www.cnn.com/2020/06/01/health/review-masks-social-distancing-covid-19-wellness/index.html
-                </a>
-            </span>
-        </p>
-        <ol class="c15 lst-kix_gnjef91sb53-0 start" start="1">
-            <li class="c1 c4"><span class="c0">w/ social distancing </span></li>
-        </ol>
-        <ul class="c15 lst-kix_q3gdnw7yb0ik-0 start">
-            <li class="c1 c6"><span class="c0">Less than 1m is 12.8%</span></li>
-            <li class="c1 c6"><span class="c0">More than 1m is 2.6% (most effective with 2m)</span></li>
-        </ul>
-        <ol class="c15 lst-kix_gnjef91sb53-0" start="2">
-            <li class="c1 c4"><span class="c0">w/ face masks (certainty of evidence is low)</span></li>
-        </ol>
-        <ul class="c15 lst-kix_xcrsba1mx2r8-0 start">
-            <li class="c1 c6"><span class="c0">With is 3.1%</span></li>
-            <li class="c1 c6"><span class="c0">Without is 17.4%</span></li>
-        </ul>
-        <ol class="c15 lst-kix_gnjef91sb53-0" start="3">
-            <li class="c1 c4"><span class="c0">Eye protection (certainty of evidence is low)</span></li>
-        </ol>
-        <ul class="c15 lst-kix_tg13xwi8qqru-0 start">
-            <li class="c1 c6"><span class="c0">Without is 16%</span></li>
-            <li class="c1 c6"><span class="c0">With (like face shield, goggles, glasses) is 5.5%</span></li>
-        </ul>
-        <p class="c1 c2"><span class="c0"></span></p>
-        <ul class="c15 lst-kix_px84ddvokvu3-0 start">
-            <li class="c1 c4"><span class="c0">On average, staying 1m away from people reduces your chance of catching COVID by 80%</span></li>
-            <li class="c1 c4"><span class="c0">Wearing mask/face covering reduces chance up to 85%</span></li>
-            <li class="c1 c4"><span class="c0">Wearing goggles or face shield reduces up to 78%</span></li>
-        </ul>
-        <p class="c1 c2"><span class="c0"></span></p>
-        <p class="c1">
-            <span class="c16 c13">
-                <a
-                    class="c14"
-                    href="https://www.google.com/url?q=https://www.statnews.com/2020/03/03/who-is-getting-sick-and-how-sick-a-breakdown-of-coronavirus-risk-by-demographic-factors/&amp;sa=D&amp;ust=1596340928275000&amp;usg=AOvVaw3PEhdeESgkbbc_HJLwEDKf"
-                >
-                    https://www.statnews.com/2020/03/03/who-is-getting-sick-and-how-sick-a-breakdown-of-coronavirus-risk-by-demographic-factors/
-                </a>
-            </span>
-        </p>
-        <ul class="c15 lst-kix_d7cqtu7otsws-0 start">
-            <li class="c1 c4"><span class="c0">87% of cases in China were ages 30-79</span></li>
-            <li class="c1 c4"><span class="c0">8.1% were 20-something years old</span></li>
-            <li class="c1 c4"><span class="c0">1.2% were teens </span></li>
-            <li class="c1 c4"><span class="c0">0.9% were 9 or younger</span></li>
-            <li class="c1 c4"><span class="c0">WHO said 79% of cases were 30-69</span></li>
-        </ul>
-        <p class="c1 c2"><span class="c0"></span></p>
-        <ul class="c15 lst-kix_3mcpprf5exv9-0 start">
-            <li class="c1 c4"><span class="c0">Men might be more susceptible to catching COVID</span></li>
-            <li class="c1 c4"><span class="c0">106 men had covid for every 100 women</span></li>
-            <li class="c1 c4"><span class="c0">WHO found that men make up 51% of cases</span></li>
-            <li class="c1 c4">
-                <span class="c13">A study in Wuhan (through Jan 29) of 1099 patients show 58% &nbsp;were </span><span class="c13">male</span><sup><a href="#cmnt6" id="cmnt_ref6">[f]</a></sup>
-                <sup><a href="#cmnt7" id="cmnt_ref7">[g]</a></sup>
-            </li>
-        </ul>
-        <p class="c1 c2"><span class="c0"></span></p>
-        <p class="c1"><span class="c8">Who is asymptomatic</span></p>
-        <p class="c1">
-            <span class="c16 c29">
-                <a
-                    class="c14"
-                    href="https://www.google.com/url?q=https://www.msn.com/en-us/health/medical/80-percent-of-people-in-this-age-group-are-asymptomatic/ar-BB15zLMB&amp;sa=D&amp;ust=1596340928277000&amp;usg=AOvVaw3GTYia214joLXZoaFw_JV2"
-                >
-                    https://www.msn.com/en-us/health/medical/80-percent-of-people-in-this-age-group-are-asymptomatic/ar-BB15zLMB
-                </a>
-            </span>
-        </p>
-        <ul class="c15 lst-kix_sb1iiad9qc79-0 start">
-            <li class="c1 c4"><span class="c0">79% of middle schoolers/teenagers don&rsquo;t show symptoms</span></li>
-        </ul>
-        <p class="c1">
-            <span class="c16 c13">
-                <a class="c14" href="https://www.google.com/url?q=https://www.nature.com/articles/s41591-020-0962-9&amp;sa=D&amp;ust=1596340928278000&amp;usg=AOvVaw1XsVMTXbyuUC9SISERrr6j">
-                    https://www.nature.com/articles/s41591-020-0962-9
-                </a>
-            </span>
-        </p>
-        <ul class="c15 lst-kix_n35lu2mtohmr-0 start">
-            <li class="c1 c4"><span class="c0">21% show symptoms (10-19 years)</span></li>
-            <li class="c1 c4"><span class="c0">69% show symptoms (over 70 years)</span></li>
-        </ul>
-        <p class="c1 c2"><span class="c0"></span></p>
-        <p class="c1"><span class="c8">Coughing</span></p>
-        <ul class="c15 lst-kix_v7iln5a2b40j-0 start">
-            <li class="c1 c4"><span class="c0">Can be represented through particles or groups of particles</span></li>
-            <li class="c1 c4"><span class="c0">Mouth size &nbsp;= average 4cm x 33 cm, vary between people</span></li>
-            <li class="c1 c4"><span class="c0">Particles are ejected in a linear fashion</span></li>
-            <li class="c1 c4"><span class="c13">each is around 80 um in diameter, density roughly the same as water</span></li>
-            <li class="c1 c4">
-                <span class="c16 c13">
-                    <a class="c14" href="https://www.google.com/url?q=https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0668.2009.00619.x&amp;sa=D&amp;ust=1596340928279000&amp;usg=AOvVaw2T_jnTYuxDHtpl30OU5h0B">
-                        https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0668.2009.00619.x
-                    </a>
-                </span>
-                <span class="c0">&nbsp;</span>
-            </li>
-        </ul>
-        <ul class="c15 lst-kix_v7iln5a2b40j-1 start">
-            <li class="c1 c6"><span class="c0">particles released over 0.5 seconds, with peak at 0.1 seconds</span></li>
-            <li class="c1 c6"><span class="c0">0.8-2.2L total volume (including air)</span></li>
-            <li class="c1 c6"><span class="c0">6-22 m/s initial velocity, with average at 11.2</span></li>
-            <li class="c1 c6"><span class="c0">coughs vary greatly between different people</span></li>
-        </ul>
-        <ul class="c15 lst-kix_v7iln5a2b40j-0">
-            <li class="c1 c4">
-                <span class="c16 c13">
-                    <a class="c14" href="https://www.google.com/url?q=https://royalsocietypublishing.org/doi/full/10.1098/rsif.2009.0388.focus&amp;sa=D&amp;ust=1596340928279000&amp;usg=AOvVaw2BTINgWgmeSmY0fG6LyFZb">
-                        https://royalsocietypublishing.org/doi/full/10.1098/rsif.2009.0388.focus
-                    </a>
-                </span>
-            </li>
-        </ul>
-        <ul class="c15 lst-kix_v7iln5a2b40j-1 start">
-            <li class="c1 c6"><span class="c0">around 70mg of total fluid</span></li>
-            <li class="c1 c6"><span class="c0">average 108 droplets per cough</span></li>
-            <li class="c1 c6"><span class="c0">each droplet should be around 0.65g for force purposes</span></li>
-        </ul>
-        <ul class="c15 lst-kix_v7iln5a2b40j-0">
-            <li class="c1 c4"><span class="c0">We can have a particle represent 1000 droplets</span></li>
-            <li class="c1 c4"><img src="images/equation.png" /><span class="c0">&nbsp;&lt;&lt; equation for droplets produced over time</span></li>
-            <li class="c1 c4"><span class="c0">For simulation</span></li>
-        </ul>
-        <ul class="c15 lst-kix_v7iln5a2b40j-1 start">
-            <li class="c1 c6"><span class="c0">particles are produced from the mouth with random speed between 6-22, and random angle between -10 and 10 degrees</span></li>
-            <li class="c1 c6"><span class="c0">gravity, wind, and air resistance act on particles</span></li>
-            <li class="c1 c6"><span class="c0">colour to show density</span></li>
-            <li class="c1 c6"><span class="c0">particles become larger and less dense over time to represent dispersion and breakup of droplets</span></li>
-        </ul>
-      </div><!-- /.blog-post -->
 
-      <div class="blog-post">
-        <h2 class="blog-post-title">Mask Simulation Research</h2>
-       
-		
-		 <body class="c3">
-        <p class="c0">
-            <span class="c1">
-                When a person coughs, an average of 108 respiratory droplets are released, totalling up to 70mg of fluid. Droplets are usually around 80 &micro;m in diameter, but the largest can be half a millimeter wide. These droplets
-                travel at speeds up to 22m/s initially after being ejected from the mouth, but are rapidly slowed by air resistance. This, combined with breakup effects, means that droplets travel no further than 1 meter away from the
-                person.
-            </span>
-        </p>
-        <p class="c0 c2"><span class="c1"></span></p>
-        <p class="c0">
-            <span class="c1">
-                Droplets produced by sneezes fall under two relatively distinct distribution models. The first, unimodal distribution, results in fewer droplets than coughing, but droplets have an average diameter of 360 &micro;m. The other
-                distribution, bimodal, produces smaller 76 &micro;m droplets. The average speed of a sneeze is very difficult to measure, as they cannot be induced naturally as compared to coughs. Estimates of sneeze velocity range from 20
-                m/s to 100 m/s. Due to this, the range is difficult to calculate, but is certainly longer than that of coughs.
-            </span>
-        </p>
-        <p class="c0 c2"><span class="c1"></span></p>
-        <p class="c0">
-            <span class="c1">
-                Normal breathing produces droplets, but their velocities are low enough to consider them negligible in infectious diseases. Talking, however, can result in velocities of 10m/s. Droplets produced during speech are much
-                smaller, typically less than 10 &micro;m, but these are sufficiently large to carry COVID-19 particles.
-            </span>
-        </p>
-        <p class="c0 c2"><span class="c1"></span></p>
-        <p class="c0">
-            <span class="c1">
-                To find relative chances of infection based on age, an age distribution of confirmed COVID-19 cases in China was compared to the population pyramid. Chance of infection increased with age. From this, someone age 50-59 was
-                almost 3 times more likely to be infected than someone age 20-29. Almost no cases were found in those under the age of 20, while a significant percentage of elderly people contracted the virus.
-            </span>
-        </p>
-        <p class="c0 c2"><span class="c1"></span></p>
-        <p class="c0">
-            <span class="c1">
-                N95 masks and similar variants have been thoroughly tested and their ability to block 95% of airborne particles confirmed. This applies droplets produced by the individual as well. Surgical masks are very effective at
-                stopping droplets from coughs and sneezes, but some small particles can pass through the filter. Only 70% of particles from the environment are blocked by the mask. In comparison, cloth masks are actually slightly more
-                effective at preventing particles from entering, but allow significantly more particles to exit.
-            </span>
-        </p>
-        <p class="c0 c2"><span class="c1"></span></p>
-        <p class="c0 c2"><span class="c1"></span></p>
-    </body>
-	 </div><!-- /.blog-post -->
+        <main role="main" class="container">
+            <div class="row">
+                <div class="col-md-8 blog-main">
+                    <h3 class="pb-4 mb-4 font-italic border-bottom">
+                        Simulation Research Summaries, and Sources
+                    </h3>
 
-    </div><!-- /.blog-main -->
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">Particle Simulation Research</h2>
 
-  </div><!-- /.row -->
+                        <body class="c10">
 
-</main><!-- /.container -->
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c7">
+                                <span class="c1">
+                                    To begin, a brief summary of Unity&rsquo;s physics engine will help with the
+                                    understanding of the calculations to be made. Unity does not include specific units
+                                    for measuring its variables like velocity or acceleration. It
+                                    also does not take into account mass into any of its physics explicitly, and thus,
+                                    it&rsquo;s value for gravity is based on its preset $-9.8m/s^2$
+                                </span>
+                                <span class="c1">. This means that any object in unity with a value of 1 for its gravity
+                                    modifier will fall at $-9.8m/s^2$</span>
+
+                                <span class="c0">, regardless of its size. For this reason, the gravity modifier was
+                                    taken into account using a different method to accommodate for the lack of
+                                    consideration for mass. </span>
+                            </p>
+                            <p class="c3"><span class="c0"></span></p>
+                            <p class="c4 c7"><span class="c0">The primary values that were integral to deriving the
+                                    values of the other forces were the speed of the particles, their mass, and the
+                                    duration of the processes: \[F = ma = m\frac{v_{f}-v_{i}}{t_{f}-t_{i}}\]</span></p>
+                            <p class="c3"><span class="c0"></span></p>
+
+                            <p class="c3"><span class="c0"></span></p>
+                            <p class="c4 c7">
+                                <span class="c1">The literature values of their peak speeds are $100miles/h$</span>
+                                <span class="c1">or $\approx44.702m/s$</span><span class="c1">&nbsp;for a sneeze, and
+                                    $50miles/h$ or $\approx22.352m/s$ </span>
+                                <span class="c1">for a cough. (Olsberg) The literature values of the average sizes of
+                                    both sneeze and cough particles are $72\mu m$ and $62.5\mu
+                                    m$&nbsp;respectively.</span>
+                                <span class="c1">(Han &amp; Xie, 2013a, 2009b) By dividing the total mass of fluids from
+                                    20 cough trials by the trial number; $\frac{79.4mg}{20} = 3.97mg$</span>
+                                <span class="c1">, and the total average number of cough particles in a single cough;
+                                    3000, the average mass of a single cough particle was found: $\approx0.001323mg =
+                                    1.323*10^{-9}kg$ </span>
+                                <span class="c1">. (Xie &amp; Bardi, 2009a, 2009b) By using the ratios of mass to
+                                    particle size, the average mass of a single sneeze particle can be found:
+                                    $\approx0.001524mg = 1.524*10^{-9}kg$&nbsp;</span><span class="c1"></span>
+
+                                <span class="c0">. From the same study done on sneezes, the average duration of both a
+                                    sneeze and a cough can be found: 0.5s. (Han) With these variables, the average force
+                                    of both a sneeze and a cough can be found.
+                                    \[F_{sneeze} = 1.524*10^{-9}kg*\frac{44.702m/s}{0.5s} = 1.363*10^{-7}N
+                                    \]
+
+                                    \[F_{cough} = 1.323*10^{-9}kg*\frac{22.352m/s}{0.5s} = 5.914*10^{-7}N
+                                    \]
+                                </span>
+                            </p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+
+                            <p class="c4"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                            <p class="c4"><span class="c0">Using the same mass values, we can determine the force of
+                                    gravity on each individual particle: \[F_{g\ on\ sneeze} =
+                                    1.524*10^{-9}kg*9.8m/s^{2} = 1.494*10^{-8}N
+                                    \]
+
+                                    \[F_{g\ on\ cough} = 1.323*10^{-9}kg*9.8m/s^{2} = 1.297*10^{-8}N
+                                    \]</span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4"><span class="c0">In determining the ratio between the force of gravity and
+                                    force of each respective processes, the value for the gravity modifier can be
+                                    found: \[G.Modifier_{sneeze}=0.110\]
+
+                                    \[G.Modifier_{cough}=0.219\]
+                                </span></p>
+
+                            <p class="c4">
+                                <span class="c1">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another force that affects moving
+                                    particles is drag, though it will be omitted in this instance as its calculated
+                                    force for both the sneeze and the cough were on an order of $10^{-9}$ times smaller
+                                    than the force of gravity
+                                    and the sneeze. </span>
+                            </p>
+                            <p class="c4">
+                                <span class="c0">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another thing that needed to be
+                                    taken into account was the obvious damping of the particle speed as the particles
+                                    traveled with time. This value was determined by adjusting the
+                                    value based on the distance traveled by the particles in relation to the actual
+                                    distance traveled by both the sneeze and the cough in literature values; up to 27
+                                    feet; &gt; 8meters for a sneeze and up to 6 meters for a
+                                    cough. This yielded unity damping values of 0.05 and 0.04 for the sneeze and cough
+                                    respectively.
+                                </span>
+                            </p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4">
+                                <span class="c1">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some details that were enabled were
+                                    the collision, noise, shape, colour, and size modules, and the start speed. With the
+                                    collision module, we set the number of particle
+                                    collisions to take place to be the same as the number of particles with both the
+                                    cough and the sneeze. Due to the limitations of rendering and its toll on a digital
+                                    device, reducing the number of sneeze particles from the
+                                    literature value of $\approx100000$
+                                    particles to 4000 was necessary. (Olsberg) For this reason, we reduced the number of
+                                    cough particles to 120 to maintain the ratio of 100000 : 3000 particles between a
+                                    sneeze and a cough to maintain some semblance of the
+                                    ratio. Collision meshes were given to the masks and the character models to allow
+                                    for proper particle collisions. The noise module was activated to allow for realism
+                                    in the particle movement to resemble the nature of moving
+                                    particles in the real world. A damping effect on the noise module was used to mimic
+                                    the loss of spontaneity in the particles as they continue in their motion. The shape
+                                    module was activated to allow for the relative cone
+                                    shape of a sneeze, originating at a base approximately the size of the character
+                                    model&rsquo;s mouth. The size of the particles was enlarged and given a green colour
+                                    for visual enhancement purposes. The start speed was set
+                                    to originate from a curve to mimic the variance in output speeds of the particles,
+                                    with the max speed set to the peak speeds of each respective process.
+                                </span>
+                            </p>
+                            <p class="c4"><span class="c0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                            <p class="c4">
+                                <span class="c0">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;That concludes the further info
+                                    section. I hope you gained more insight as to how we created this simulation and the
+                                    effectiveness of using a mask in the prevention of virus or
+                                    bacteria spread.
+                                </span>
+                            </p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c2"><span class="c0">Bibliography</span></p>
+                            <p class="c6">
+                                <span class="c1">Bardi, Jason Socrates. &ldquo;The Gross Science of a Cough and a
+                                    Sneeze.&rdquo; </span><span class="c1 c8">LiveScience</span>
+                                <span class="c0">, Purch, 14 June 2009,
+                                    www.livescience.com/3686-gross-science-cough-sneeze.html.</span>
+                            </p>
+                            <p class="c6">
+                                <span class="c1">Han, Z. Y., et al. &ldquo;Characterizations of Particle Size
+                                    Distribution of the Droplets Exhaled by Sneeze.&rdquo; </span><span
+                                    class="c1 c8">Journal of The Royal Society Interface</span>
+                                <span class="c0">, vol. 10, no. 88, 6 Nov. 2013, p. 20130560.,
+                                    doi:10.1098/rsif.2013.0560.</span>
+                            </p>
+                            <p class="c6">
+                                <span class="c1">Matthews, Robert. &ldquo;How Far Do Coughs and Sneezes Travel?&rdquo;
+                                </span><span class="c1 c8">BBC Science Focus Magazine</span>
+                                <span class="c0">, Science Focus , 16 June 2019,
+                                    www.sciencefocus.com/the-human-body/how-far-do-coughs-and-sneezes-travel/.</span>
+                            </p>
+                            <p class="c6">
+                                <span class="c1">Olsberg, MacKenzie Health &amp; Wellness Lung Health and Diseases
+                                    Science. </span><span class="c1 c8">How Fast Is a Sneeze Versus a Cough? Cover Your
+                                    Mouth Either Way!</span>
+                                <span class="c0">&nbsp;9 Apr. 2020, www.lung.org/blog/sneeze-versus-cough.</span>
+                            </p>
+                            <p class="c6">
+                                <span class="c1">Xie, Xiaojian, et al. &ldquo;Exhaled Droplets Due to Talking and
+                                    Coughing.&rdquo; </span><span class="c1 c8">Journal of The Royal Society
+                                    Interface</span>
+                                <span class="c0">, vol. 6, no. suppl_6, 7 Oct. 2009,
+                                    doi:10.1098/rsif.2009.0388.focus.</span>
+                            </p>
+                            <p class="c4 c5"><span class="c0"></span></p>
+                            <p class="c4 c5"><span class="c9"></span></p>
+                        </body>
+                    </div><!-- /.blog-post -->
+
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">COVID Spread research</h2>
+
+
+                        <p class="c1">
+                            <span class="c29">Chances of transmitting </span><span class="c29">COVID </span><sup><a
+                                    href="#cmnt3" id="cmnt_ref3">[c]</a></sup><sup><a href="#cmnt4"
+                                    id="cmnt_ref4">[d]</a></sup>
+                            <sup><a href="#cmnt5" id="cmnt_ref5">[e]</a></sup><span class="c8">with different
+                                scenarios</span>
+                        </p>
+                        <p class="c1">
+                            <span class="c16 c13">
+                                <a class="c14"
+                                    href="https://www.google.com/url?q=https://www.cnn.com/2020/06/01/health/review-masks-social-distancing-covid-19-wellness/index.html&amp;sa=D&amp;ust=1596340928273000&amp;usg=AOvVaw1gEUChiRoxlXVtzz29q3Ye">
+                                    https://www.cnn.com/2020/06/01/health/review-masks-social-distancing-covid-19-wellness/index.html
+                                </a>
+                            </span>
+                        </p>
+                        <ol class="c15 lst-kix_gnjef91sb53-0 start" start="1">
+                            <li class="c1 c4"><span class="c0">w/ social distancing </span></li>
+                        </ol>
+                        <ul class="c15 lst-kix_q3gdnw7yb0ik-0 start">
+                            <li class="c1 c6"><span class="c0">Less than 1m is 12.8%</span></li>
+                            <li class="c1 c6"><span class="c0">More than 1m is 2.6% (most effective with 2m)</span></li>
+                        </ul>
+                        <ol class="c15 lst-kix_gnjef91sb53-0" start="2">
+                            <li class="c1 c4"><span class="c0">w/ face masks (certainty of evidence is low)</span></li>
+                        </ol>
+                        <ul class="c15 lst-kix_xcrsba1mx2r8-0 start">
+                            <li class="c1 c6"><span class="c0">With is 3.1%</span></li>
+                            <li class="c1 c6"><span class="c0">Without is 17.4%</span></li>
+                        </ul>
+                        <ol class="c15 lst-kix_gnjef91sb53-0" start="3">
+                            <li class="c1 c4"><span class="c0">Eye protection (certainty of evidence is low)</span></li>
+                        </ol>
+                        <ul class="c15 lst-kix_tg13xwi8qqru-0 start">
+                            <li class="c1 c6"><span class="c0">Without is 16%</span></li>
+                            <li class="c1 c6"><span class="c0">With (like face shield, goggles, glasses) is 5.5%</span>
+                            </li>
+                        </ul>
+                        <p class="c1 c2"><span class="c0"></span></p>
+                        <ul class="c15 lst-kix_px84ddvokvu3-0 start">
+                            <li class="c1 c4"><span class="c0">On average, staying 1m away from people reduces your
+                                    chance of catching COVID by 80%</span></li>
+                            <li class="c1 c4"><span class="c0">Wearing mask/face covering reduces chance up to
+                                    85%</span></li>
+                            <li class="c1 c4"><span class="c0">Wearing goggles or face shield reduces up to 78%</span>
+                            </li>
+                        </ul>
+                        <p class="c1 c2"><span class="c0"></span></p>
+                        <p class="c1">
+                            <span class="c16 c13">
+                                <a class="c14"
+                                    href="https://www.google.com/url?q=https://www.statnews.com/2020/03/03/who-is-getting-sick-and-how-sick-a-breakdown-of-coronavirus-risk-by-demographic-factors/&amp;sa=D&amp;ust=1596340928275000&amp;usg=AOvVaw3PEhdeESgkbbc_HJLwEDKf">
+                                    https://www.statnews.com/2020/03/03/who-is-getting-sick-and-how-sick-a-breakdown-of-coronavirus-risk-by-demographic-factors/
+                                </a>
+                            </span>
+                        </p>
+                        <ul class="c15 lst-kix_d7cqtu7otsws-0 start">
+                            <li class="c1 c4"><span class="c0">87% of cases in China were ages 30-79</span></li>
+                            <li class="c1 c4"><span class="c0">8.1% were 20-something years old</span></li>
+                            <li class="c1 c4"><span class="c0">1.2% were teens </span></li>
+                            <li class="c1 c4"><span class="c0">0.9% were 9 or younger</span></li>
+                            <li class="c1 c4"><span class="c0">WHO said 79% of cases were 30-69</span></li>
+                        </ul>
+                        <p class="c1 c2"><span class="c0"></span></p>
+                        <ul class="c15 lst-kix_3mcpprf5exv9-0 start">
+                            <li class="c1 c4"><span class="c0">Men might be more susceptible to catching COVID</span>
+                            </li>
+                            <li class="c1 c4"><span class="c0">106 men had covid for every 100 women</span></li>
+                            <li class="c1 c4"><span class="c0">WHO found that men make up 51% of cases</span></li>
+                            <li class="c1 c4">
+                                <span class="c13">A study in Wuhan (through Jan 29) of 1099 patients show 58% &nbsp;were
+                                </span><span class="c13">male</span><sup><a href="#cmnt6" id="cmnt_ref6">[f]</a></sup>
+                                <sup><a href="#cmnt7" id="cmnt_ref7">[g]</a></sup>
+                            </li>
+                        </ul>
+                        <p class="c1 c2"><span class="c0"></span></p>
+                        <p class="c1"><span class="c8">Who is asymptomatic</span></p>
+                        <p class="c1">
+                            <span class="c16 c29">
+                                <a class="c14"
+                                    href="https://www.google.com/url?q=https://www.msn.com/en-us/health/medical/80-percent-of-people-in-this-age-group-are-asymptomatic/ar-BB15zLMB&amp;sa=D&amp;ust=1596340928277000&amp;usg=AOvVaw3GTYia214joLXZoaFw_JV2">
+                                    https://www.msn.com/en-us/health/medical/80-percent-of-people-in-this-age-group-are-asymptomatic/ar-BB15zLMB
+                                </a>
+                            </span>
+                        </p>
+                        <ul class="c15 lst-kix_sb1iiad9qc79-0 start">
+                            <li class="c1 c4"><span class="c0">79% of middle schoolers/teenagers don&rsquo;t show
+                                    symptoms</span></li>
+                        </ul>
+                        <p class="c1">
+                            <span class="c16 c13">
+                                <a class="c14"
+                                    href="https://www.google.com/url?q=https://www.nature.com/articles/s41591-020-0962-9&amp;sa=D&amp;ust=1596340928278000&amp;usg=AOvVaw1XsVMTXbyuUC9SISERrr6j">
+                                    https://www.nature.com/articles/s41591-020-0962-9
+                                </a>
+                            </span>
+                        </p>
+                        <ul class="c15 lst-kix_n35lu2mtohmr-0 start">
+                            <li class="c1 c4"><span class="c0">21% show symptoms (10-19 years)</span></li>
+                            <li class="c1 c4"><span class="c0">69% show symptoms (over 70 years)</span></li>
+                        </ul>
+                        <p class="c1 c2"><span class="c0"></span></p>
+                        <p class="c1"><span class="c8">Coughing</span></p>
+                        <ul class="c15 lst-kix_v7iln5a2b40j-0 start">
+                            <li class="c1 c4"><span class="c0">Can be represented through particles or groups of
+                                    particles</span></li>
+                            <li class="c1 c4"><span class="c0">Mouth size &nbsp;= average 4cm x 33 cm, vary between
+                                    people</span></li>
+                            <li class="c1 c4"><span class="c0">Particles are ejected in a linear fashion</span></li>
+                            <li class="c1 c4"><span class="c13">each is around 80 um in diameter, density roughly the
+                                    same as water</span></li>
+                            <li class="c1 c4">
+                                <span class="c16 c13">
+                                    <a class="c14"
+                                        href="https://www.google.com/url?q=https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0668.2009.00619.x&amp;sa=D&amp;ust=1596340928279000&amp;usg=AOvVaw2T_jnTYuxDHtpl30OU5h0B">
+                                        https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0668.2009.00619.x
+                                    </a>
+                                </span>
+                                <span class="c0">&nbsp;</span>
+                            </li>
+                        </ul>
+                        <ul class="c15 lst-kix_v7iln5a2b40j-1 start">
+                            <li class="c1 c6"><span class="c0">particles released over 0.5 seconds, with peak at 0.1
+                                    seconds</span></li>
+                            <li class="c1 c6"><span class="c0">0.8-2.2L total volume (including air)</span></li>
+                            <li class="c1 c6"><span class="c0">6-22 m/s initial velocity, with average at 11.2</span>
+                            </li>
+                            <li class="c1 c6"><span class="c0">coughs vary greatly between different people</span></li>
+                        </ul>
+                        <ul class="c15 lst-kix_v7iln5a2b40j-0">
+                            <li class="c1 c4">
+                                <span class="c16 c13">
+                                    <a class="c14"
+                                        href="https://www.google.com/url?q=https://royalsocietypublishing.org/doi/full/10.1098/rsif.2009.0388.focus&amp;sa=D&amp;ust=1596340928279000&amp;usg=AOvVaw2BTINgWgmeSmY0fG6LyFZb">
+                                        https://royalsocietypublishing.org/doi/full/10.1098/rsif.2009.0388.focus
+                                    </a>
+                                </span>
+                            </li>
+                        </ul>
+                        <ul class="c15 lst-kix_v7iln5a2b40j-1 start">
+                            <li class="c1 c6"><span class="c0">around 70mg of total fluid</span></li>
+                            <li class="c1 c6"><span class="c0">average 108 droplets per cough</span></li>
+                            <li class="c1 c6"><span class="c0">each droplet should be around 0.65g for force
+                                    purposes</span></li>
+                        </ul>
+                        <ul class="c15 lst-kix_v7iln5a2b40j-0">
+                            <li class="c1 c4"><span class="c0">We can have a particle represent 1000 droplets</span>
+                            </li>
+                            <li class="c1 c4"><span class="c0">$n = 50(-25(t-0.1)-e^{-25(t-0.1)})+500$&nbsp;&lt;&lt;
+                                    equation
+                                    for droplets produced over time</span></li>
+                            <li class="c1 c4"><span class="c0">For simulation</span></li>
+                        </ul>
+                        <ul class="c15 lst-kix_v7iln5a2b40j-1 start">
+                            <li class="c1 c6"><span class="c0">particles are produced from the mouth with random speed
+                                    between 6-22, and random angle between -10 and 10 degrees</span></li>
+                            <li class="c1 c6"><span class="c0">gravity, wind, and air resistance act on particles</span>
+                            </li>
+                            <li class="c1 c6"><span class="c0">colour to show density</span></li>
+                            <li class="c1 c6"><span class="c0">particles become larger and less dense over time to
+                                    represent dispersion and breakup of droplets</span></li>
+                        </ul>
+                    </div><!-- /.blog-post -->
+
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">Mask Simulation Research</h2>
+
+
+                        <body class="c3">
+                            <p class="c0">
+                                <span class="c1">
+                                    When a person coughs, an average of 108 respiratory droplets are released, totalling
+                                    up to 70mg of fluid. Droplets are usually around 80 &micro;m in diameter, but the
+                                    largest can be half a millimeter wide. These droplets
+                                    travel at speeds up to 22m/s initially after being ejected from the mouth, but are
+                                    rapidly slowed by air resistance. This, combined with breakup effects, means that
+                                    droplets travel no further than 1 meter away from the
+                                    person.
+                                </span>
+                            </p>
+                            <p class="c0 c2"><span class="c1"></span></p>
+                            <p class="c0">
+                                <span class="c1">
+                                    Droplets produced by sneezes fall under two relatively distinct distribution models.
+                                    The first, unimodal distribution, results in fewer droplets than coughing, but
+                                    droplets have an average diameter of 360 &micro;m. The other
+                                    distribution, bimodal, produces smaller 76 &micro;m droplets. The average speed of a
+                                    sneeze is very difficult to measure, as they cannot be induced naturally as compared
+                                    to coughs. Estimates of sneeze velocity range from 20
+                                    m/s to 100 m/s. Due to this, the range is difficult to calculate, but is certainly
+                                    longer than that of coughs.
+                                </span>
+                            </p>
+                            <p class="c0 c2"><span class="c1"></span></p>
+                            <p class="c0">
+                                <span class="c1">
+                                    Normal breathing produces droplets, but their velocities are low enough to consider
+                                    them negligible in infectious diseases. Talking, however, can result in velocities
+                                    of 10m/s. Droplets produced during speech are much
+                                    smaller, typically less than 10 &micro;m, but these are sufficiently large to carry
+                                    COVID-19 particles.
+                                </span>
+                            </p>
+                            <p class="c0 c2"><span class="c1"></span></p>
+                            <p class="c0">
+                                <span class="c1">
+                                    To find relative chances of infection based on age, an age distribution of confirmed
+                                    COVID-19 cases in China was compared to the population pyramid. Chance of infection
+                                    increased with age. From this, someone age 50-59 was
+                                    almost 3 times more likely to be infected than someone age 20-29. Almost no cases
+                                    were found in those under the age of 20, while a significant percentage of elderly
+                                    people contracted the virus.
+                                </span>
+                            </p>
+                            <p class="c0 c2"><span class="c1"></span></p>
+                            <p class="c0">
+                                <span class="c1">
+                                    N95 masks and similar variants have been thoroughly tested and their ability to
+                                    block 95% of airborne particles confirmed. This applies droplets produced by the
+                                    individual as well. Surgical masks are very effective at
+                                    stopping droplets from coughs and sneezes, but some small particles can pass through
+                                    the filter. Only 70% of particles from the environment are blocked by the mask. In
+                                    comparison, cloth masks are actually slightly more
+                                    effective at preventing particles from entering, but allow significantly more
+                                    particles to exit.
+                                </span>
+                            </p>
+                            <p class="c0 c2"><span class="c1"></span></p>
+                            <p class="c0 c2"><span class="c1"></span></p>
+                        </body>
+                    </div><!-- /.blog-post -->
+
+                </div><!-- /.blog-main -->
+
+            </div><!-- /.row -->
+
+        </main><!-- /.container -->
 
 </body>
+
 </html>
