@@ -20,151 +20,97 @@
     <link rel="icon" href="logo.png">
 
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
 
-    <style>
-  
-  
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-	  
-	  #scene{
-
-
-	  position: absolute;
-
-	  }
-	  
-.button {
-width : 30%;
-height: 8%;
-bottom: 20%;
-right: 10%;
-  border: none;
-  color: white;
-  position: fixed;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-
-}
-
-.button2 {
-bottom: 40%;
-background-color: #008CBA;
-  
-
-} /* Blue */
-.button3 {
-bottom: 50%;
-background-color: #f44336;
-  } 
-/* Red */ 
-.button4 {
-bottom: 60%;
-background-color: #e7e7e7; color: black;
-} 
-
-
-
-
-
-    </style>
-  
     <!-- Custom styles for this template -->
-    <link href="menu.css" rel="stylesheet">
+  <link href="menu.css" rel="stylesheet">
   <link href="home.css" rel="stylesheet">
   
   </head>
+  
   <body class="text-center">
-  
- 
-  
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
+      <header class="masthead mb-auto">
     <div class="inner">
       <img class="masthead-brand" src="logo.png" width=40wh></img>
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link active" href="home.html">Home</a>
         <a class="nav-link" href="aboutUs.html">About us</a>
-    <a class="nav-link" href="research.html">Research</a>
-    
+        <a class="nav-link" href="research.html">Research</a>
       </nav>
     </div>
   </header>
 
-  <canvas id="scene"  >
+  <div>
+  <!--<button class="button button2" onclick="window.location.href='SpatialBuild2/index.html';">Social Distancing Simulation</button>
+  <button class="button button3" onclick="window.location.href='maskBuild4/index.html';">Mask Simulation</button>
+  <button class="button button4" onclick="window.location.href='MaterialBuild2/index.html';">Materials Simulation</button>
+  -->
+  </div>
 
+  <canvas id="scene"  >
   </canvas> 
 
-				     <input id="copy" value="A-BIT OF COVID" type="hidden" />
-          <div id="subtitle">
-           Learn about COVID-19 one bit at a time with the help of our simulations =)
-         </div>
-       <div id="particle-container" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-            <img class="particle" src="logob.png"></img>
-            <img class="particle" src="logoy.png"></img>
-            <img class="particle" src="logor.png"></img>
-
+  <input id="copy" value="A-BIT OF COVID" type="hidden" />
+    <div id="subtitle">
+       Learn about COVID-19 one bit at a time with the help of our simulations =)
+    </div>
+      <div class="butt1">
+        <img class="b1" src="yellow.png" onclick="window.location.href='SpatialBuild2/index.html';"/>
+        <div class="overlay">
+          <div class="text">Helwwo</div>
         </div>
-<div><!--class="align-self-center ml-auto"> -->
-	<button class="button button2" onclick="window.location.href='SpatialBuild2/index.html';">Social Distancing Simulation</button>
-<button class="button button3" onclick="window.location.href='maskBuild4/index.html';">Mask Simulation</button>
-<button class="button button4" onclick="window.location.href='MaterialBuild2/index.html';">Materials Simulation</button>
+      </div>
 
-</div>
-</div>
+      <div class="butt2">
+        <img class="b2" src="pink.png" onclick="window.location.href='maskBuild4/index.html';"/>
+      </div>
+
+      <div class="butt3">
+        <img class="b3" src="blue.png" onclick="window.location.href='MaterialBuild2/index.html';" />
+      </div>
+
+    <div id="particle-container" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <img class="particle" src="logob.png">
+      <img class="particle" src="logoy.png">
+      <img class="particle" src="logor.png">
+      <img class="particle" src="logob.png">
+      <img class="particle" src="logoy.png">
+      <img class="particle" src="logor.png">
+      <img class="particle" src="logob.png">
+      <img class="particle" src="logoy.png">
+      <img class="particle" src="logor.png">
+      <img class="particle" src="logob.png">
+      <img class="particle" src="logoy.png">
+      <img class="particle" src="logor.png">
+      <img class="particle" src="logob.png">
+      <img class="particle" src="logoy.png">
+      <img class="particle" src="logor.png">
+      <img class="particle" src="logob.png">
+      <img class="particle" src="logoy.png">
+      <img class="particle" src="logor.png">
+      <img class="particle" src="logob.png">
+      <img class="particle" src="logoy.png">
+      <img class="particle" src="logor.png">
+      <img class="particle" src="logob.png">
+      <img class="particle" src="logoy.png">
+      <img class="particle" src="logor.png">
+      <img class="particle" src="logob.png">
+      <img class="particle" src="logoy.png">
+      <img class="particle" src="logor.png">
+      <img class="particle" src="logob.png">
+      <img class="particle" src="logoy.png">
+      <img class="particle" src="logor.png">
+    </div>
+
+  </div>
  
 
 
  <!-- this is for the header particles -->
-
-  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
 <script>
-
  var canvas = document.querySelector("#scene"),
         ctx = canvas.getContext("2d"),
         particles = [],
