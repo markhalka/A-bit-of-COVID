@@ -52,9 +52,10 @@
   </canvas> 
 
   <input id="copy" value="A-BIT OF COVID" type="hidden" />
-    <div id="subtitle">
-       Learn about COVID-19 one bit at a time with the help of our simulations =)
+    <div id="subtitle" >
+       Learn about COVID-19 one bit at a time with the help </br>of our simulations :)
     </div>
+
       <div class="butt1">
         <img class="b1" src="yellow.png" onclick="window.location.href='SpatialBuild2/index.html';"/>
         <div class="overlay" style= "background-color: #F7D62F" onclick="window.location.href='SpatialBuild2/index.html';">
@@ -145,7 +146,7 @@
             x : x,
             y: y
         };
-        this.r =  Math.random()*5 + wh*0.01;
+        this.r =  Math.random()*5 + wh*0.015;
         this.vx = (Math.random()-0.5)*20;
         this.vy = (Math.random()-0.5)*20;
         this.accX = 0;
@@ -208,11 +209,11 @@
         
         if (ww > 750){
           ctx.textAlign = "left";
-          ctx.fillText(copy.value, 0.02*ww, 0.4*wh);
+          ctx.fillText(copy.value, 0.04*ww, 0.45*wh);
         }
         else{
           ctx.textAlign = "center";
-          ctx.fillText(copy.value, 0.5*ww, 0.4*wh);
+          ctx.fillText(copy.value, 0.5*ww, 0.45*wh);
         }
         
 
@@ -222,8 +223,8 @@
 
         //location of particles
         particles = [];
-        for(var i=0;i<ww;i+=Math.round(ww/300)){
-            for(var j=0;j<wh;j+=Math.round(ww/300)){
+        for(var i=0;i<ww;i+=Math.round(ww/235)){
+            for(var j=0;j<wh;j+=Math.round(ww/235)){
                 if(data[ ((i + j*ww)*4) + 3] > 150){
                     particles.push(new Particle(i,j));
                 }

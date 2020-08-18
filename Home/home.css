@@ -38,7 +38,7 @@
   z-index: 10;
   position: absolute;;
   color: #F0F7F4;
-  font-size: 4vh;
+  font-size: 3vh;
   font-family: silkscreennormal;
   top: 50%;
   left: 50%;
@@ -49,7 +49,7 @@
 .butt1{
   z-index: 9;
   position: absolute;
-  width: 35vw;
+  width: 40vw;
   height: 20vh;
   left: 55vw; 
   top: 50vh;
@@ -60,7 +60,7 @@
 .butt2{
   z-index: 9;
   position: absolute;
-  width: 35vw;
+  width: 40vw;
   height: 20vh;
   left: 55vw; 
   top: 50vh;
@@ -71,7 +71,7 @@
 .butt3{
   z-index: 9;
   position: absolute;
-  width: 35vw;
+  width: 40vw;
   height: 20vh;
   left: 55vw; 
   top: 50vh;
@@ -110,7 +110,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  width: 35vw;
+  width: 40vw;
   height: 20vh;
   opacity: 0;
   transition: .5s ease;
@@ -166,7 +166,8 @@
   top: 50vh;
   color: #F0F7F4;
   font-family: silkscreennormal;
-  padding-right: ;
+  font-size: 3vh;
+  padding-left: 5vh;
 }
 
 
