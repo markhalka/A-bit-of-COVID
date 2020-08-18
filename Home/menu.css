@@ -20,7 +20,7 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #F0F7F4;
 }
 
 /*
@@ -49,14 +49,14 @@ body {
 
 .nav-masthead .nav-link {
   padding: .1rem 0;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(240, 247, 244, .5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+  border-bottom-color: rgba(240, 247, 244, .25);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -64,8 +64,8 @@ body {
 }
 
 .nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: #F0F7F4;
+  border-bottom-color: #F0F7F4;
 }
 
 @media (min-width: 48em) {

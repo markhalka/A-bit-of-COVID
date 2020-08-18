@@ -17,7 +17,17 @@
 }
 
 .masthead{
+  position: relative;
+  z-index: 11;
+}
+
+.text{
+  position: absolute;
   z-index: 10;
+  text-align: left;
+  top: 50vh;
+  color: #F0F7F4;
+  font-family: silkscreennormal;
 }
 
 .butt1{
@@ -94,6 +104,14 @@
   opacity: 1;
 }
 
+.butt2:hover .overlay{
+  opacity: 1;
+}
+
+.butt3:hover .overlay{
+  opacity: 1;
+}
+
 
 .bd-placeholder-img {
   font-size: 1.125rem;
@@ -130,7 +148,7 @@
   position: absolute;
   text-align: left;
   top: 50vh;
-  color: white;
+  color: #F0F7F4;
   font-family: silkscreennormal;
   padding-right: ;
 }
