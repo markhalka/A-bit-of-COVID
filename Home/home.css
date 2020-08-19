@@ -17,13 +17,39 @@
 }
 
 .masthead{
+  position: relative;
+  z-index: 12;
+}
+
+.text{
   z-index: 10;
+  position: relative;
+  text-align: center;
+  color: #F0F7F4;
+  font-size: 2.5vh;
+  font-family: lato;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2vh;
+}
+
+.title{
+  z-index: 10;
+  position: absolute;;
+  color: #F0F7F4;
+  font-size: 3vh;
+  font-family: silkscreennormal;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 5vh;
 }
 
 .butt1{
   z-index: 9;
   position: absolute;
-  width: 35vw;
+  width: 40vw;
   height: 20vh;
   left: 55vw; 
   top: 50vh;
@@ -34,7 +60,7 @@
 .butt2{
   z-index: 9;
   position: absolute;
-  width: 35vw;
+  width: 40vw;
   height: 20vh;
   left: 55vw; 
   top: 50vh;
@@ -45,7 +71,7 @@
 .butt3{
   z-index: 9;
   position: absolute;
-  width: 35vw;
+  width: 40vw;
   height: 20vh;
   left: 55vw; 
   top: 50vh;
@@ -78,19 +104,27 @@
 }
 
 .overlay {
+  z-index: 11;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 35vw;
+  width: 40vw;
   height: 20vh;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
 }
 
 .butt1:hover .overlay{
+  opacity: 1;
+}
+
+.butt2:hover .overlay{
+  opacity: 1;
+}
+
+.butt3:hover .overlay{
   opacity: 1;
 }
 
@@ -130,9 +164,10 @@
   position: absolute;
   text-align: left;
   top: 50vh;
-  color: white;
+  color: #F0F7F4;
   font-family: silkscreennormal;
-  padding-right: ;
+  font-size: 3vh;
+  padding-left: 5vh;
 }
 
 
