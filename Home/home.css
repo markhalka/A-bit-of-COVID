@@ -1,5 +1,5 @@
-.overflow-hidden { overflow: hidden; }
 
+.overflow-hidden { overflow: hidden; }
 @font-face {
     font-family: silkscreennormal;
     src: url('slkscr-webfont.woff2') format('woff2'),
@@ -24,83 +24,77 @@
 .text{
   z-index: 10;
   position: relative;
-  text-align: center;
   color: #F0F7F4;
   font-size: 2.5vh;
   font-family: lato;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 2vh;
+  
 }
 
 .title{
   z-index: 10;
   position: absolute;
-  text-align: center;
   color: #F0F7F4;
   font-size: 3vh;
   font-family: silkscreennormal;
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   line-height: 5vh;
+
 }
 
 .butt1{
   z-index: 9;
-  position: absolute;
+  position: relative;
   width: 40vw;
   height: 20vh;
-  left: 55vw; 
-  top: 50vh;
-  transform: translate(0, -155%);
+  
+
+
+ 
   
 }
 
 .butt2{
   z-index: 9;
-  position: absolute;
+  position: relative;
   width: 40vw;
   height: 20vh;
-  left: 55vw; 
-  top: 50vh;
-  transform: translate(0, -35%);
+  
+
+
   
 }
 
 .butt3{
   z-index: 9;
-  position: absolute;
+  position: relative;
   width: 40vw;
   height: 20vh;
-  left: 55vw; 
-  top: 50vh;
-  transform: translate(0, 85%);
+
+
+
   
 }
 
 .b1{
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+
+  position: relative;
   
 }
 
 .b2{
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+
+  position: relative;
   
 }
 
 .b3{
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+
+  position: relative;
   
 }
 
