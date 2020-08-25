@@ -1,4 +1,4 @@
-*{overflow: hidden;}
+.overflow-hidden { overflow: hidden; }
 
 @font-face {
     font-family: silkscreennormal;
