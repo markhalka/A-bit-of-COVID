@@ -36,7 +36,8 @@
 
 .title{
   z-index: 10;
-  position: absolute;;
+  position: absolute;
+  text-align: center;
   color: #F0F7F4;
   font-size: 3vh;
   font-family: silkscreennormal;
