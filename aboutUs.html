@@ -56,9 +56,12 @@
     <div class="my-3 p-3">
       <h2 class="display-4">About Us</h2>
       <p class="lead">Learn about the team and our big goals</p>
+	 
     </div>
     <div class="bg-dark shadow-sm mx-auto text-center overflow-hidden"
-    style="width: 95%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+    style="width: 95%; height: 300px; border-radius: 21px 21px 0 0;">
+	<p style="color: white; position: relative; top: 50%; text-align: center;">Click on a team member to read more about them!</p>
+	</div>
   </div>
   
   
@@ -238,44 +241,14 @@
     </div>
     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"></div>
     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"></div>
-  <div id="particle-container" style="height: 1000vh; z-index: 7">
-  <img class="particle" src="images/logoImages/logob.png" /> 
-  <img class="particle" src="images/logoImages/logoy.png" /> 
-  <img class="particle" src="images/logoImages/logor.png" /> 
-  <img class="particle" src="images/logoImages/logob.png" /> 
-  <img class="particle" src="images/logoImages/logoy.png" /> 
-  <img class="particle" src="images/logoImages/logor.png" /> 
-  <img class="particle" src="images/logoImages/logob.png" /> 
-  <img class="particle" src="images/logoImages/logoy.png" /> 
-  <img class="particle" src="images/logoImages/logor.png" /> 
-  <img class="particle" src="images/logoImages/logob.png" /> 
-  <img class="particle" src="images/logoImages/logoy.png" /> 
-  <img class="particle" src="images/logoImages/logor.png" /> 
-  <img class="particle" src="images/logoImages/logob.png" /> 
-  <img class="particle" src="images/logoImages/logoy.png" /> 
-  <img class="particle" src="images/logoImages/logor.png" /> 
-  <img class="particle" src="images/logoImages/logob.png" /> 
-  <img class="particle" src="images/logoImages/logoy.png" /> 
-  <img class="particle" src="images/logoImages/logor.png" /> 
-  <img class="particle" src="images/logoImages/logob.png" /> 
-  <img class="particle" src="images/logoImages/logoy.png" /> 
-  <img class="particle" src="images/logoImages/logor.png" /> 
-  <img class="particle" src="images/logoImages/logob.png" /> 
-  <img class="particle" src="images/logoImages/logoy.png" /> 
-  <img class="particle" src="images/logoImages/logor.png" /> 
-  <img class="particle" src="images/logoImages/logob.png" /> 
-  <img class="particle" src="images/logoImages/logoy.png" /> 
-  <img class="particle" src="images/logoImages/logor.png" /> 
-  <img class="particle" src="images/logoImages/logob.png" /> 
-  <img class="particle" src="images/logoImages/logoy.png" /> 
-  <img class="particle" src="images/logoImages/logor.png" /></div>
+
   <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
 var previous;
 var current;
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener('mouseenter', function() {
+  coll[i].addEventListener('mousedown', function() {
       var content = this.nextElementSibling;
     if (content.style.maxHeight){
       content.style.maxHeight = null;
