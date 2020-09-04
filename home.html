@@ -174,7 +174,11 @@
     function initScene(){
         ww = canvas.width = $( window ).width();
         wh = canvas.height = $( window ).height();
-        ctx.font = (ww/15)+"px lato";
+		var fontWidth = ww/15;
+		if(ww <= 750){
+		fontWidth = ww/10;
+		}
+        ctx.font = fontWidth+"px lato";
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
         if (ww > 750){
