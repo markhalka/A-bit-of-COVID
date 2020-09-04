@@ -37,7 +37,7 @@ the importance of wearing masks, but also the limitations that come with them, (
 
 # Materials
 
-![Materials Simulation](/images/screenshots/cough1)
+![Materials Simulation](/images/screenshots/cough1.png)
 
 The third and final simulation explores how long COVID particles survive on different materials in different conditions. The user may choose from a variety of different materials
 such as phone screens, paper money, and clothes. They may also choose the temperature and humidity of the enviornment. Again, the full mathematics of our implementation can be found in the 
