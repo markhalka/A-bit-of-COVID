@@ -2,16 +2,16 @@
 .overflow-hidden { overflow: hidden; }
 @font-face {
     font-family: silkscreennormal;
-    src: url('slkscr-webfont.woff2') format('woff2'),
-         url('slkscr-webfont.woff') format('woff');
+    src: url('../fonts/slkscr-webfont.woff2') format('woff2'),
+         url('../fonts/slkscr-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: lato;
-    src: url('lato-regular-webfont.woff2') format('woff2'),
-         url('lato-regular-webfont.woff') format('woff');
+    src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lato-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -98,31 +98,12 @@
   
 }
 
-.overlay {
-  z-index: 11;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 40vw;
-  height: 20vh;
-  opacity: 0;
-  transition: .5s ease;
-}
 
-.butt1:hover .overlay{
-  opacity: 1;
+.buttons{
+	width: 50vw;
+	height: 20vh;
+	margin: 10px;
 }
-
-.butt2:hover .overlay{
-  opacity: 1;
-}
-
-.butt3:hover .overlay{
-  opacity: 1;
-}
-
 
 .bd-placeholder-img {
   font-size: 1.125rem;
@@ -156,13 +137,12 @@
     }
 
 #subtitle{
-  position: absolute;
-  text-align: left;
+  text-align: center;
   top: 50vh;
   color: #F0F7F4;
   font-family: silkscreennormal;
-  font-size: 3vh;
-  padding-left: 5vh;
+  font-size: 6vh;
+
 }
 
 
