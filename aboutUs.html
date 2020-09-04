@@ -270,20 +270,20 @@
   <img class="particle" src="images/logoImages/logoy.png" /> 
   <img class="particle" src="images/logoImages/logor.png" /></div>
   <script>
-var coll = document.getElementsByClassName(&quot;collapsible&quot;);
+var coll = document.getElementsByClassName("collapsible");
 var i;
 var previous;
 var current;
-for (i = 0; i &lt; coll.length; i++) {
-  coll[i].addEventListener(&quot;mouseenter&quot;, function() {
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener('mouseenter', function() {
       var content = this.nextElementSibling;
     if (content.style.maxHeight){
       content.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + &quot;px&quot;;
+      content.style.maxHeight = content.scrollHeight + 'px';
     } 
         
-          if(current != null &amp;&amp; current != this){
+          if(current != null && current != this){
  var previousContent = current.nextElementSibling;
     if (previousContent.style.maxHeight){
                 setTimeout(function(){  previousContent.style.maxHeight = null; }, 200);
