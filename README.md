@@ -10,7 +10,7 @@ Below is a more in-depth description of each simulation, although we encourage y
 
 # Community Spread
 
-![Community Spread](/images/screenshots/spacial1)
+![Community Spread](/images/screenshots/spacial1.png)
 
 The first simulation explores how COVID spreads in a mini-community that consists of a grocery store, a school, an office, and a home.
 The user has the option of choosing which character they would like to play as. They have the option of choosing between
@@ -21,14 +21,14 @@ Within the game, there are many NPC's (nonplayer characters). These characters m
 and move around within the game. The age, gender, and weather or not the NPC is wearing a mask all affect their likelyhood of being infected if exposed to the virus.
 When NPC's are infected, they go throught a phase of showing no symptoms, but still spreading the particles (shown when blinking red), and become fully infected when solid red.
 
-![End Game](/images/screenshots/spacial2)
+![End Game](/images/screenshots/spacial2.png)
 
 Once the user wishes to leave the simulation, they press the menu bar at the top right, and they can see the amount of people infected in the community, and the amount of time the simulation ran.
 Playing multiple rounds with different paramaters for the social distancing, can help users understand the importance of such measures, and why they are implemented, as well as why they should be followed.
 
 # Masks
 
-![Mask Simulation](/images/screenshots/mask1)
+![Mask Simulation](/images/screenshots/mask1.png)
 
 The second simulation explores the effect of masks on COVID particles. The user may choose between different combinations of masks, and actions (such as sneezing, coughing or talking).
 The user may then see how virus particles interact with the mask, and how effective the mask is in different scenarios. The full mathematics and physics used for the implementation can be found in the 
