@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--          _       _             _    _____           _     _    
+     /\        | |   (_) |          / _|  / ____|         (_)   | |
+    /  \ ______| |__  _| |_    ___ | |_  | |     _____   ___  __| |
+   / /\ \______| '_ \| | __|  / _ \|  _| | |    / _ \ \ / / |/ _` |
+  / ____ \     | |_) | | |_  | (_) | |   | |___| (_) \ V /| | (_| |
+ /_/    \_\    |_.__/|_|\__|  \___/|_|    \_____\___/ \_/ |_|\__,_|
+-->
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="so, imagine covid, but only a bit of it ;)" />
+    <meta name="author" content="A bunch of people" />
+    <meta name="generator" content="Jekyll v4.0.1" />
+    <title>A-bit of Covid</title>
+    <link rel="icon" href="images/logoImages/logo.png" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet" />
+  </head>
+  <body>
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <img class="masthead-brand" src="images/logoImages/logo.png" width="40wh" />
+      <nav class="nav nav-masthead justify-content-center">
+      <a class="nav-link active" href="home.html">Home</a> 
+      <a class="nav-link" href="aboutUs.html">About us</a> 
+      <a class="nav-link" href="research.html">Research</a></nav>
+    </div>
+  </header>
+ 
+  <canvas id="scene" style="position:relative"></canvas>
+ 
+    <input id="copy" value="A-BIT OF COVID" type="hidden" />
+  <h1 id="subtitle" >Learn about COVID-19 one bit at a time with the help
+  <br />of our simulations :)</h1>
+  
+    <div class="text-center">
+<div class = "btn-group-vertical" >
+	        
+        <button class="buttons" style= "background-color: #F7D62F; margin-top: 10vh;" onclick="window.location.href='builds/SpatialBuild/index.html';">
+        Social Distancing Simulation
+		</button>
+ 
+        <button class="buttons" style= "background-color: #F72F72" onclick="window.location.href='builds/maskBuild/index.html';">
+       Mask Simulation
+	   </button>
+      
+        <button class="buttons" style= "background-color: #3DA1FF" onclick="window.location.href='builds/MaterialBuild/index.html';">
+       Materials Simulation
+	   </button>
+    
+	  </div>
+	  </div>
+ 
+  <div id="particle-container">
+  <img class="particle" src="images/logoImages/logob.png" /> 
+  <img class="particle" src="images/logoImages/logoy.png" /> 
+  <img class="particle" src="images/logoImages/logor.png" /> 
+  <img class="particle" src="images/logoImages/logob.png" /> 
+  <img class="particle" src="images/logoImages/logoy.png" /> 
+  <img class="particle" src="images/logoImages/logor.png" /> 
+  <img class="particle" src="images/logoImages/logob.png" /> 
+  <img class="particle" src="images/logoImages/logoy.png" /> 
+  <img class="particle" src="images/logoImages/logor.png" /> 
+  <img class="particle" src="images/logoImages/logob.png" /> 
+  <img class="particle" src="images/logoImages/logoy.png" /> 
+  <img class="particle" src="images/logoImages/logor.png" /> 
+  <img class="particle" src="images/logoImages/logob.png" /> 
+  <img class="particle" src="images/logoImages/logoy.png" /> 
+  <img class="particle" src="images/logoImages/logor.png" /> 
+  <img class="particle" src="images/logoImages/logob.png" /> 
+  <img class="particle" src="images/logoImages/logoy.png" /> 
+  <img class="particle" src="images/logoImages/logor.png" /> 
+  <img class="particle" src="images/logoImages/logob.png" /> 
+  <img class="particle" src="images/logoImages/logoy.png" /> 
+  <img class="particle" src="images/logoImages/logor.png" /> 
+  <img class="particle" src="images/logoImages/logob.png" /> 
+  <img class="particle" src="images/logoImages/logoy.png" /> 
+  <img class="particle" src="images/logoImages/logor.png" /> 
+  <img class="particle" src="images/logoImages/logob.png" /> 
+  <img class="particle" src="images/logoImages/logoy.png" /> 
+  <img class="particle" src="images/logoImages/logor.png" /> 
+  <img class="particle" src="images/logoImages/logob.png" /> 
+  <img class="particle" src="images/logoImages/logoy.png" /> 
+  <img class="particle" src="images/logoImages/logor.png" /></div>
+  <!-- this is for the header particles -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <script>
+  var canvas = document.querySelector("#scene"),
+        ctx = canvas.getContext("2d"),
+        particles = [],
+        amount = 0,
+        mouse = {x:0,y:0},
+        radius = 1;
+  var virus1 = new Image();
+  var virus2 = new Image();
+  var virus3 = new Image();
+    virus1.src = "images/logoImages/logob.png";
+    virus2.src = "images/logoImages/logoy.png";
+    virus3.src = "images/logoImages/logor.png";
+    
+    var copy = document.querySelector("#copy");
+
+    var ww = canvas.width = $( window ).width();
+    var wh = canvas.height = $( window ).height();
+
+    function Particle(x,y){
+        this.x =  Math.random()*ww;
+        this.y =  Math.random()*wh;
+        this.dest = {
+            x : x,
+            y: y
+        };
+        this.r =  Math.random()*5 + wh*0.015;
+        this.vx = (Math.random()-0.5)*20;
+        this.vy = (Math.random()-0.5)*20;
+        this.accX = 0;
+        this.accY = 0;
+    var index = Math.floor(Math.random()*3);
+    this.image = virus1;
+    if(index == 1){
+      this.image = virus2
+    } else if(index == 2){
+      this.image = virus3
+    }
+        this.friction = Math.random()*0.05 + 0.94;
+    }
+
+    Particle.prototype.render = function() {
+        this.accX = (this.dest.x - this.x)/1000;
+        this.accY = (this.dest.y - this.y)/1000;
+        this.vx += this.accX;
+        this.vy += this.accY;
+        this.vx *= this.friction;
+        this.vy *= this.friction;
+
+        this.x += this.vx;
+        this.y += this.vy;
+      ctx.drawImage(this.image, this.x, this.y, this.r, this.r);
+        var a = this.x - mouse.x;
+        var b = this.y - mouse.y;
+
+        var distance = Math.sqrt( a*a + b*b );
+        if(distance<(radius*70)){
+            this.accX = (this.x - mouse.x)/100;
+            this.accY = (this.y - mouse.y)/100;
+            this.vx += this.accX;
+            this.vy += this.accY;
+        }
+    }
+
+    function onMouseMove(e){
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    }
+
+    function onTouchMove(e){
+    if(e.touches.length > 0 ){
+      mouse.x = e.touches[0].clientX;
+      mouse.y = e.touches[0].clientY;
+    }
+    }
+
+    function onTouchEnd(e){
+      mouse.x = -9999;
+      mouse.y = -9999;
+    }
+
+    function initScene(){
+        ww = canvas.width = $( window ).width();
+        wh = canvas.height = $( window ).height();
+        ctx.font = (ww/15)+"px lato";
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        if (ww > 750){
+          ctx.textAlign = "center";
+          ctx.fillText(copy.value, 0.5*ww, 0.5*wh);
+        }
+        else{
+          ctx.textAlign = "center";
+          ctx.fillText(copy.value, 0.5*ww, 0.5*wh);
+        }
+        
+
+        var data  = ctx.getImageData(0, 0, ww, wh).data;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.globalCompositeOperation = "screen";
+
+        //location of particles
+        particles = [];
+        for(var i=0;i<ww;i+=Math.round(ww/235)){
+            for(var j=0;j<wh;j+=Math.round(ww/235)){
+                if(data[ ((i + j*ww)*4) + 3] > 150){
+                    particles.push(new Particle(i,j));
+                }
+            }
+        }
+        amount = particles.length;
+
+    }
+
+    function onMouseClick(){
+        radius++;
+        if(radius === 3){
+            radius = 0;
+        }
+    }
+
+    function render(a) {
+        requestAnimationFrame(render);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (var i = 0; i < amount; i++) {
+            particles[i].render();
+        }
+    };
+
+    copy.addEventListener("keyup", initScene);
+    window.addEventListener("load", initScene);
+    window.addEventListener("resize", initScene);
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("touchmove", onTouchMove);
+    window.addEventListener("click", onMouseClick);
+    window.addEventListener("touchend", onTouchEnd);
+    initScene();
+    requestAnimationFrame(render);
+
+
+</script></body>
+</html>
